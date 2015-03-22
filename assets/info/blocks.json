@@ -1,0 +1,5 @@
+[
+	{
+		"Code": "var txtMyText:TextField = new TextField(); txtMyText.text = 'Value'; txtMyText.defaultTextFormat = Fonts.GetFormat('main', 12, 0xFFFFFF); txtMyText.width = 50; txtMyText.x = 20; txtMyText.y = 5; var myScene:Scene = new Scene(); myScene.addChild(txtMyText); Scene.Start(myScene);"
+	}
+]

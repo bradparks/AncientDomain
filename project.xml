@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<!-- NMML reference: https://gist.github.com/1763850 -->
+	
+	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
+	<meta title="Engine" package="Engine" version="1.0.0" company="Colour Multimedia Enterprises" />
+	
+	<!-- output -->
+	<app main="Main" file="Engine" path="bin" />
+	
+	<window background="#FFFFFF" fps="60" />
+	<window width="848" height="480" unless="mobile" />
+	<window orientation="landscape" vsync="true" antialiasing="0" if="cpp" />
+	<window hardware="true" allow-shaders="true" require-shaders="true" if="cpp"/>
+	<window fullscreen="true" if="mobile" />
+	
+	<!-- classpath, haxe libs -->
+	<source path="src" />
+	<haxelib name="openfl" />
+	<haxelib name="actuate" />
+	<haxelib name="hscript" />
+	
+	<!-- assets -->
+	<icon path="assets/openfl.svg" />
+	<assets path="assets/img" rename="img" include="*.png|*.jpg" />
+	<assets path="assets/audio" rename="audio" include="*.mp3" if="flash" />
+	<assets path="assets/audio" rename="audio" include="*.wav|*.ogg" unless="flash" />
+	<assets path="assets/font" rename="font" include="*.ttf" /> 
+	
+	<!-- optimize output
+	<haxeflag name="-dce full" /> -->
+	
+</project>
